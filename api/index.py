@@ -23,8 +23,9 @@ class handler(BaseHTTPRequestHandler):
         # Parse the URL
         url = urlparse(self.path)
         query_params = parse_qs(url.query)
-        
-        self.wfile.write(json.dumps(getMarks(query_params)).encode('utf-8'))
+
+        print(getMarks(query_params))
+        self.wfile.write(json.dumps({"message": "Hello!"}).encode('utf-8'))
         return
 
     def getMarks(names):
