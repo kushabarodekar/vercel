@@ -15,11 +15,12 @@ class handler(BaseHTTPRequestHandler):
             data = json.load(file)
 
         for key, value in query_params.items():
-            marks = None
-            for item in data:
-                if item.get("name") == value:
-                    marks = item.get("marks")
-                    markList.append(marks)
+            for nameValue in value:
+                marks = None
+                for item in data:
+                    if item.get("name") == nameValue:
+                        marks = item.get("marks")
+                        markList.append(marks)
         
         output = {"marks":markList}
         
