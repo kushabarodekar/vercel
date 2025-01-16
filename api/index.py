@@ -9,14 +9,10 @@ class handler(BaseHTTPRequestHandler):
         url = urlparse(self.path)
         query_params = parse_qs(url.query)
 
-        print(getMarks(names))
+        print(query_params)
         self.send_response(200)
         self.send_header('Content-type','application/json')
         self.end_headers()
         self.wfile.write(json.dumps({"message": "Hello!"}).encode('utf-8'))
         return
-
-    def getMarks(names):
-        print(names)
-        return names
 
