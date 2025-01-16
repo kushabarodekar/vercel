@@ -13,6 +13,6 @@ class handler(BaseHTTPRequestHandler):
         self.send_response(200)
         self.send_header('Content-type','application/json')
         self.end_headers()
-        self.wfile.write(json.dumps({"message": "Hello!"}).encode('utf-8'))
+        self.wfile.write(json.dumps(query_params).encode('utf-8'))
         return
 
