@@ -18,7 +18,9 @@ class handler(BaseHTTPRequestHandler):
         return
 
     def getMarksForStudent(names):
+        print(names)
         with open('../q-vercel-python.json', 'r') as file:
             data = json.load(file)
+        print(data)
         return data
 
