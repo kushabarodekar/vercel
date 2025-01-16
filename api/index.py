@@ -30,8 +30,8 @@ class handler(BaseHTTPRequestHandler):
 
     def getMarks(names):
         print(names)
-        with open('q-vercel-python.json', 'r') as file:
-            data = json.load(file)
-        print(data)
-        return data
+        #with open('q-vercel-python.json', 'r') as file:
+        #    data = json.load(file)
+        #print(data)
+        return names
 
